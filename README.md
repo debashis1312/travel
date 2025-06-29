@@ -1,87 +1,116 @@
-# Welcome to React Router!
+# 🌍 Tourvism
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Tourvism is an intelligent travel planning web application that uses **Gemini AI** to generate personalized travel packages and plans based on user preferences and purpose. It leverages cutting-edge technologies to offer a seamless and interactive travel planning experience.
 
 ---
 
-Built with ❤️ using React Router.
+## 🚀 Features
+
+- 🧠 **AI-Powered Planning**: Uses Google Gemini to understand your requirements and create customized itineraries.
+- 🏞️ **Purpose-Based Packages**: Tailors suggestions based on solo travel, honeymoon, family trips, adventure, or business.
+- 📅 **Interactive UI**: Built using **Syncfusion** components for a responsive and engaging experience.
+- 🔐 **Authentication & Backend**: Managed using **Appwrite** for secure and scalable app development.
+- 🛠️ **Error Monitoring**: Integrated with **Sentry** for real-time performance monitoring and issue tracking.
+- ⚡ **Modern Stack**: Built with **Next.js** and **TypeScript** for scalability and performance.
+
+---
+
+## 🧱 Tech Stack
+
+- **Frontend**: Next.js, TypeScript, Syncfusion
+- **AI Integration**: Google Gemini
+- **Backend & Auth**: Appwrite
+- **Monitoring**: Sentry
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 18
+- Appwrite self-hosted or cloud instance
+- Google Gemini API Key
+- Sentry DSN
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/tourvism.git
+cd tourvism
+
+2. Install dependencies:
+
+
+
+npm install
+
+3. Create a .env file:
+
+
+
+cp .env.example .env
+
+4. Configure your environment variables inside .env.
+
+
+5. Run the development server:
+
+
+
+npm run dev
+
+
+---
+
+🧪 Environment Variables (.env)
+
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key
+NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn
+
+
+---
+
+📁 Folder Structure
+
+/tourvism
+├── components/         # Reusable UI components (Syncfusion)
+├── pages/              # Next.js pages
+├── lib/                # Helper functions and Gemini integration
+├── appwrite/           # Appwrite config and services
+├── public/             # Static files
+├── styles/             # Global and modular styles
+└── ...
+
+
+---
+
+🧠 AI Features
+
+Context-aware travel planning using Gemini
+
+Multilingual support (planned)
+
+Budget estimation and smart suggestions (planned)
+
+
+
+---
+
+🛡️ Security & Monitoring
+
+All API keys and sensitive info are kept out of source control.
+
+Sentry tracks and alerts on performance issues and crashes.
+
+
+
+---
+
+📄 License
+
+This project is licensed under the MIT License.
